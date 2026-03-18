@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitback furnitures</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-size: 0.625rem;
+    }
+  </style>
+
+  <body style="display: flex; flex-direction: column; align-items: center">
+    <header style="width: 100%; text-align: center">
+      <b><h3 style="font-size: 3rem; padding: 2rem">SITBACK FURNITURES</h3></b>
+      <nav
+        style="
+          background-color: black;
+          color: white;
+          height: 7.3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <ul
+          style="
+            display: flex;
+            list-style: none;
+            font-size: 1.2rem;
+            justify-content: center;
+            gap: 1rem;
+          "
+        >
+          <li>COUCHES</li>
+          <li>CHAIRS</li>
+          <li>DINING</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="display: flex; flex-direction: column; align-items: center">
+      <section style="padding: 5.5rem; text-align: center">
+        <h2 style="font-size: 5rem">Your Home, With Love</h2>
+        <h3 style="font-size: 3rem">Choose from a zillion collections</h3>
+      </section>
+      <section style="display: flex; justify-content: center; gap: 3rem">
+        <img
+          src="../images/couches.png"
+          alt="couches"
+          width="454rem"
+          height="613rem"
+        />
+        <img
+          src="../images/couches.png"
+          alt="chairs"
+          width="454rem"
+          height="613rem"
+        />
+        <img
+          src="../images/couches.png"
+          alt="dining"
+          width="454rem"
+          height="613rem"
+        />
+      </section>
+      <section
+        style="
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          margin-top: 5.9rem;
+          margin-bottom: 6.8rem;
+        "
+      >
+        <h2 style="font-size: 5.3rem; margin-bottom: 1.9rem"></h2>
+        <p style="font-size: 2.6rem; line-height: 2.9rem">
+          Furniture is a big deal in the design industry. A well-executed
+          concept can result <br />
+          in a timeless piece of furniture that never goes out of style.
+          "Furniture builds up <br />
+          over time - the more the furniture recorder traces of the owner's
+          whereabouts<br />and lifestyle, the more it will increase its value
+          for the owner, says Johansen.<br />
+          "The leather's ability to expand is utilized as the owner has the
+          opportunity to<br />
+          influence and shape the product with time."
+        </p>
+        <a
+          href="https://www.google.com"
+          style="font-size: 2.7rem; text-decoration: none; margin-top: 1.8rem"
+          >Take me to Google</a
+        >
+      </section>
+      <section style="margin-bottom: 6.3rem">
+        <h2
+          style="margin-bottom: 3.1rem; font-size: 3.7rem; text-align: center"
+        >
+          Contact Us
+        </h2>
+        <form
+          action="/contact-us"
+          method="POST"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 1.7rem;
+            width: 45.1rem;
+          "
+        >
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            style="padding: 2rem"
+          />
+          <input
+            id="contactNumber"
+            type="string"
+            name="contact-number"
+            placeholder="Contact Number"
+            style="padding: 2rem"
+          />
+          <input
+            id="emailAddress"
+            type="email"
+            name="email-address"
+            placeholder="Email Address"
+            style="padding: 2rem"
+          />
+          <input
+            id="birthYear"
+            type="date"
+            name="birth-year"
+            placeholder="Year of Birth"
+            style="padding: 2rem"
+          />
+          <select
+            id="state"
+            name="state"
+            placeholder="State"
+            style="padding: 2rem"
+          >
+            <option selected value="">Select State</option>
+            <option value="kerala">Kerala</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
