@@ -7,7 +7,7 @@
 body {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/assets/background-image.png);
+    url(./assets/background-image.png);
   background-size: cover;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -98,7 +98,7 @@ body {
 .hat-image {
   height: 5rem;
   width: 6.438rem;
-  background: url("/assets/hat-icon.svg");
+  background: url("./assets/hat-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
