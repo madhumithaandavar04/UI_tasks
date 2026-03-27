@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/assets/background-image.png);
+  background-size: cover;
+  z-index: -1;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 6.5rem;
+  width: 45rem;
+  line-height: 7rem;
+}
+.title span {
+  font-weight: 700;
+  font-size: 9rem;
+  letter-spacing: -0.1rem;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 4.7rem;
+  letter-spacing: -0.1rem;
+}
+
+.year {
+  transform: rotate(270deg) translateX(10rem) translateY(48rem);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.year span {
+  margin: 1.5rem;
+  font-weight: 700;
+  font-size: 6.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.combine:hover {
+  transform: translateX(1.25rem) rotate(45deg);
+}
+
+.menubar {
+  width: 5.1rem;
+  height: 5.1rem;
+  background-color: #000000;
+  position: relative;
+  top: 2.813rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menubar:hover .navbar {
+  transform: translateX(18.75rem);
+}
+.navbar {
+  height: 48.125rem;
+  width: 16.875rem;
+  border-top-right-radius: 1.563rem;
+  border-bottom-right-radius: 1.563rem;
+  padding: 2.25rem 4rem;
+  background-color: #000000;
+  position: absolute;
+  top: 5rem;
+  left: -18.75rem;
+  text-align: center;
+  font-size: 1.12rem;
+  font-weight: 400;
+  transition: transform 1s ease-in-out;
+}
+.nav-item {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  cursor: pointer;
+  transition: transform 1s;
+  text-align: center;
+}
+.nav-item:hover {
+  transform: scale(1.1);
+}
+.hat-image {
+  height: 5rem;
+  width: 6.438rem;
+  background: url("/assets/hat-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.site-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 85vh;
+  width: 100%;
+}
+.site-footer {
+  position: absolute;
+  bottom: 0.875rem;
+  right: 1.5rem;
+}
+.facebook,
+.twitter {
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 1s;
+}
+.facebook {
+  font-size: 2rem;
+}
+.twitter {
+  font-size: 2.4rem;
+}
+.facebook:hover,
+.twitter:hover {
+  transform: scale(1.1);
+}
