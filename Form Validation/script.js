@@ -15,13 +15,13 @@ const validationRules = {
         label: "Card Expiry"
     }
 };
+
 /**
  *  validating the form
  * @param {*} event 
  */
 function formValidation(event) {
     event.preventDefault();
-
     //mapping field with its id and validator
     const fields = [
         { id: 'firstName', errorId: 'errorFirstname' },
@@ -33,13 +33,10 @@ function formValidation(event) {
         { id: 'cardExpiry', errorId: 'errorCardExpiry' },
         { id: 'cvv', errorId: 'errorCvv' }
     ];
-
-
     let isFormValid = true;
     fields.forEach(field => {
         const inputElement = document.getElementById(field.id);
         const errorElement = document.getElementById(field.errorId);
-
         //exceute the validator
         const result = validateField(field.id, inputElement.value);
         if (!result.isValid) {
@@ -52,9 +49,7 @@ function formValidation(event) {
             errorElement.style.display = 'none';
             inputElement.classList.remove('invalid');
         }
-
     })
-
     if (isFormValid) {
         window.alert("Form submitted successfully");
     }
@@ -69,25 +64,20 @@ function formValidation(event) {
 function validateField(fieldName, value) {
     const rule = validationRules[fieldName];
     const val = value.trim();
-
     //check required
     if (rule.required && val === '') {
         return { isValid: false, message: `${rule.label} is required` };
     }
-
     //check lengths
     if (rule.min && val.length < rule.min) return { isValid: false, message: `${rule.label} is not valid` };
     if (rule.max && val.length > rule.max) return { isValid: false, message: `${rule.label} is not valid` };
-
     //check regex
     if (rule.regex && !rule.regex.test(val)) {
         return { isValid: false, message: `${rule.label} is not valid` };
     }
-
     //check expiry date year check
     if (rule.custom && !rule.custom(val)) {
         return { isValid: false, message: `${rule.label} is not valid` };
     }
-
     return { isValid: true, message: "" };
 }
