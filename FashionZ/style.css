@@ -48,11 +48,11 @@ body {
   z-index: 1;
   font-size: 1.02rem;
   font-weight: 600;
-  padding: 1.06rem 0;
+  padding: 1rem 0;
 
   .menuitem {
-    margin-bottom: 0;
-    padding: 0.55rem 1.6rem;
+    padding: 0.7rem 1.6rem 0.4rem;
+    transition:background-color 0.3s ease-in-out;
   }
 
   .menuitem:hover {
@@ -78,27 +78,33 @@ body {
 }
 
 .bottom__header {
+ width: 100%;
   color: #eeeeee;
   background-color: #000000;
-  font-size: 1.4rem;
-  height: 6.68rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   position: fixed;
-  bottom: 0;
-  padding-left: 33rem;
-  padding-right: 33rem;
-  width: 100vw;
+bottom: 0;
+  left: 0;
   z-index: 1;
   cursor: pointer;
+
+ul{
+  list-style: none;
+  padding-top:2.45rem;
+  padding-left:32.5rem;
+  padding-bottom:4rem;
 }
 
 .nav-item {
   float: left;
-  list-style: none;
-  padding: 2.75rem 2rem;
+  margin: 0rem 2rem;
+  transition:transform 0.3s ease-in-out;
 }
 
 .nav-item:hover {
-  color: #95969a
+  transform:scale(1.2);
+}
 }
 
 .site-content {
@@ -179,9 +185,16 @@ body {
   color: #90b085;
   cursor: pointer;
 }
-
+.fa-solid{
+  display:none;
+}
 .star:hover {
-  color: #7bea55;
+ .fa-solid{
+  display: inline-block;
+ }
+ .fa-regular{
+  display: none;
+ }
 }
 
 .size {
@@ -207,6 +220,7 @@ body {
   font-weight: 400;
   background-color: #242529;
   cursor: pointer;
+  transition:background-color 0.3s ease-in-out ,color 0.3s ease-in-out;
 }
 
 .cart-btn:hover {
