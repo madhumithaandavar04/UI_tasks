@@ -1,11 +1,8 @@
 /** print 1 to 100**/
 function printNumberOneToHundred(){
-    const numbersArray=new Array(100);
-    const numbers=Array.from(numbersArray,(value,index)=>{return index+1});
- numbers.forEach((number)=>{
-        console.log(number);
+ for(let i=0;i<=100;i++){
+    console.log(i);
  }
- )
 }
 console.log("Numbers from 0 to 100:");
 printNumberOneToHundred();
@@ -42,12 +39,7 @@ console.log("Average : "+getAverage([1,2,3,4]));
  * @returns reversedstring
  */
 function getReversedString(word){
-let reversedString="";
-const characterArray=Array.from(word);
-characterArray.forEach((character)=>{
-reversedString=character+reversedString;
-})
-return reversedString;
+return word.split("").reverse().join("");
 }
 console.log("Reversed string : "+getReversedString("Madhumitha"));
 
