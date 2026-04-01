@@ -3,8 +3,8 @@ const validationRules = {
     lastName: { required: true, min: 1, max: 30, label: "Last Name", regex: /^[a-zA-Z\s]+$/ },
     email: { required: true, regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, max: 50, label: "Email Address" },
     contact: { required: true, regex: /^(\+91|91)?[6-9]\d{9}$/, label: "Contact Number" },
-    pincode: { required: true, regex: /^[1-9]\d{5}$/, label: "PIN Code" },
-    cardnumber: { required: true, regex: /^4\d{15}$/, label: "Card Number" },
+    pinCode: { required: true, regex: /^[1-9]\d{5}$/, label: "PIN Code" },
+    cardNumber: { required: true, regex: /^4\d{15}$/, label: "Card Number" },
     cvv: { required: true, regex: /^\d{3,4}$/, label: "CVV" },
     cardExpiry: {
         required: true,
@@ -26,8 +26,8 @@ function formValidation() {
         'lastName',
         'email',
         'contact',
-        'pincode',
-        'cardnumber',
+        'pinCode',
+        'cardNumber',
         'cardExpiry',
         'cvv'
     ];
