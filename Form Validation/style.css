@@ -52,13 +52,6 @@ body {
     margin-bottom: 2.2rem;
 }
 
-.payment-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.45rem;
-    margin-bottom: 1.4rem;
-}
-
 .billing-title {
     font-size: 1.05rem;
     font-weight: 600;
@@ -66,6 +59,13 @@ body {
     word-spacing: 0.1rem;
     color: #061a6c;
     margin-bottom: 0.6rem;
+}
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.45rem;
+    margin-bottom: 1.4rem;
 }
 
 .payment-title {

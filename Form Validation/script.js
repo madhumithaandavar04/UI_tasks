@@ -18,27 +18,25 @@ const validationRules = {
 
 /**
  *  validating the form
- * @param {*} event 
  */
-function formValidation(event) {
-    event.preventDefault();
+function formValidation() {
     //mapping field with its id and validator
     const fields = [
-        { id: 'firstName', errorId: 'errorFirstname' },
-        { id: 'lastName', errorId: 'errorLastname' },
-        { id: 'email', errorId: 'errorEmail' },
-        { id: 'contact', errorId: 'errorContact' },
-        { id: 'pincode', errorId: 'errorPincode' },
-        { id: 'cardnumber', errorId: 'errorCardNumber' },
-        { id: 'cardExpiry', errorId: 'errorCardExpiry' },
-        { id: 'cvv', errorId: 'errorCvv' }
+        'firstName',
+        'lastName',
+        'email',
+        'contact',
+        'pincode',
+        'cardnumber',
+        'cardExpiry',
+        'cvv'
     ];
     let isFormValid = true;
     fields.forEach(field => {
-        const inputElement = document.getElementById(field.id);
-        const errorElement = document.getElementById(field.errorId);
+        const inputElement = document.getElementById(field);
+        const errorElement = inputElement.parentElement.querySelector('.error-message');
         //exceute the validator
-        const result = validateField(field.id, inputElement.value);
+        const result = validateField(field, inputElement.value);
         if (!result.isValid) {
             errorElement.innerText = result.message;
             errorElement.style.display = 'block';

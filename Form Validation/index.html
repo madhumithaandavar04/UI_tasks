@@ -28,28 +28,28 @@
                     <section class="form-group">
                         <label for="firstName" class="form-label">First Name</label>
                         <input type="text" class="form-input" id="firstName" name="firstName">
-                        <p class="error-message" id="errorFirstname">Wrong password</p>
+                        <p class="error-message">Wrong password</p>
                     </section>
                     <section class="form-group">
                         <label for="lastName" class="form-label">Last Name</label>
                         <input type="text" class="form-input" id="lastName" name="lastName">
-                        <p class="error-message" id="errorLastname"></p>
+                        <p class="error-message" id="errorMessage"></p>
                     </section>
                 </section>
                 <section class="form-group">
                     <label for="email" class="form-label">Email Address</label>
                     <input type="email" class="form-input" id="email" name="email">
-                    <p class="error-message" id="errorEmail"></p>
+                    <p class="error-message"></p>
                 </section>
                 <section class="form-group">
                     <label for="contact" class="form-label">Contact Number</label>
                     <input type="text" class="form-input" id="contact" name="contact">
-                    <p class="error-message" id="errorContact"></p>
+                    <p class="error-message"></p>
                 </section>
                 <section class="form-group">
                     <label for="pincode" class="form-label">PIN Code</label>
                     <input type="text" class="form-input" id="pincode" name="pincode">
-                    <p class="error-message" id="errorPincode"></p>
+                    <p class="error-message"></p>
                 </section>
             </section>
             <section class="payment-details">
@@ -57,22 +57,22 @@
                 <section class="form-group">
                     <label for="cardnumber" class="form-label">Card Number</label>
                     <input type="text" class="form-input" id="cardnumber" name="cardnumber">
-                    <p class="error-message" id="errorCardNumber"></p>
+                    <p class="error-message"></p>
                 </section>
                 <section class="input-group">
                     <section class="form-group">
                         <label for="cardExpiry" class="form-label">Card Expiry(Year)</label>
                         <input type="text" class="form-input" id="cardExpiry" name="cardExpiry">
-                        <p class="error-message" id="errorCardExpiry"></p>
+                        <p class="error-message"></p>
                     </section>
                     <section class="form-group">
                         <label for="cvv" class="form-label">CVV</label>
                         <input type="text" class="form-input" id="cvv" name="cvv">
-                        <p class="error-message" id="errorCvv"></p>
+                        <p class="error-message"></p>
                     </section>
                 </section>
             </section>
-            <button class="payment-btn" id="paymentBtn" onclick="formValidation(event)">COMPLETE PAYMENT</button>
+            <button type="button" class="payment-btn" onclick="formValidation()">COMPLETE PAYMENT</button>
         </form>
     </main>
     <script src="script.js"></script>
