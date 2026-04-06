@@ -1,0 +1,275 @@
+@use "./variables" as *;
+@use "./extends" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
+  font-family: $font-family-base;
+}
+
+.text-highlight--blue {
+  color: $color-accent-blue;
+}
+
+.text-highlight--green {
+  color: $color-accent-green;
+}
+
+/*----- layout------*/
+
+.layout-container {
+  width: 79.08%;
+  margin: auto;
+  padding-top: 4.188rem;
+
+  @include mobile {
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+}
+
+/**------ hero--------*/
+.hero {
+  @extend %flex-center;
+  flex-direction: column;
+  padding-bottom: 10rem;
+
+  @include mobile {
+    padding-bottom: 3rem;
+  }
+
+  &__email {
+    align-self: end;
+    color: $color-text-primary;
+    text-decoration: none;
+    font-size: 1.77rem;
+    font-weight: 500;
+    margin-bottom: 7.7rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+
+    @include mobile {
+      order: 3;
+      align-self: center;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__content {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 10.9rem;
+    letter-spacing: -0.05rem;
+    word-spacing: -0.1rem;
+
+    @include tablet {
+      font-size: 4.7rem;
+    }
+
+    @include mobile {
+      font-size: 3rem;
+    }
+
+    &-text--light {
+      font-weight: 300;
+    }
+
+    &-text--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle {
+    font-size: 3.4rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+    color: $color-text-secondary;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/*------------portfolio------------*/
+.portfolio {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  gap: 2.12rem;
+  margin-bottom: 9.37rem;
+
+  @include mobile {
+    flex-direction: column;
+    margin-bottom: 6rem;
+    gap: 1rem;
+  }
+
+  &__item {
+    flex: 1 1 col-width(3, 2.12rem);
+    height: 24.18rem;
+
+    @include tablet {
+      flex: 1 1 col-width(2, 2.12rem);
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__image {
+    @include box-size(100%, 100%);
+    object-fit: cover;
+  }
+}
+
+/*--------------showoff-----------*/
+.showoff {
+  text-align: center;
+  padding-bottom: 17.8rem;
+
+  @include mobile {
+    padding-bottom: 6rem;
+  }
+
+  &__title {
+    font-size: 3.3rem;
+    margin-bottom: 5.938rem;
+    color: $color-text-secondary;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    gap: 6.4rem;
+
+    @include tablet {
+      gap: 4rem;
+    }
+
+    @include mobile {
+      gap: 1.5rem;
+    }
+  }
+
+  &__logo {
+    @include box-size(100%, 100%);
+    cursor: pointer;
+  }
+}
+
+/** brand sizes **/
+.spotify {
+  @include box-size(9.25rem, 2.813rem);
+}
+
+.olympic {
+  @include box-size(7.938rem, 2.688rem);
+}
+
+.adidas {
+  @include box-size(5.688rem, 5.438rem);
+}
+
+.lufthansa {
+  @include box-size(10rem, 1.75rem);
+}
+
+.ikea {
+  @include box-size(9rem, 3.063rem);
+}
+
+.montblanc {
+  @include box-size(7.375rem, 4.25rem);
+}
+
+/*---------footer----------*/
+.site-footer {
+  @extend %flex-center;
+  flex-direction: column;
+  padding-bottom: 9.75rem;
+
+  @include mobile {
+    padding-bottom: 6rem;
+  }
+
+  &__socials {
+    @extend %flex-center;
+    gap: 1.24rem;
+    margin-top: 7rem;
+    margin-bottom: 5.5rem;
+    cursor: pointer;
+
+    @include mobile {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__icon-container {
+    @extend %flex-center;
+    text-decoration: none;
+    color: #ffffff;
+    @include box-size(3.188rem, 3.188rem);
+    border-radius: 50%;
+    border: 1px solid $color-text-primary;
+  }
+
+  &__icon {
+    font-size: 1.9rem;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.42rem;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+
+    @include mobile {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.lines {
+  @extend %flex-center;
+  gap: 2.1rem;
+
+  .small__line {
+    width: 2rem;
+  }
+
+  .large__line {
+    width: 14.125rem;
+  }
+}
