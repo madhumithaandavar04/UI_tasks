@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-section {
+  height: 5.438rem;
+  background-color: #2d5e90;
+  padding-left: 42.6rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.37rem;
+  font-weight: 500;
+
+}
+
+.channel-name {
+  font-size: 1.4rem;
+  padding: 0.9rem;
+  padding-left: 1.6rem;
+  background-color: #2d5e90;
+  height: 3.313rem;
+  color: white;
+  font-weight: 400;
+}
+
+.description {
+  padding: 1.45rem;
+  line-height: 1.62rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.wrapper {
+  height: 100vh;
+  margin: 2.313rem 9.063rem 1.95rem 9.063rem;
+}
+
+.right-container {
+  font-size: 1.078rem;
+  letter-spacing: 0.018rem;
+  float: right;
+}
+
+.left-container {
+  font-size: 1.07rem;
+  letter-spacing: 0.015rem;
+  float: left;
+}
+
+.channel {
+  border: 0.1rem solid #2d5e90;
+  background-color: #f6f6f6;
+}
+
+.channel-one {
+  width: 54.78rem;
+  height: 22.6rem;
+  margin-bottom: 1.313rem;
+}
+
+.channel-two {
+  width: 33.84rem;
+  height: 28.9rem;
+  margin-bottom: 1.625rem;
+}
+
+.channel-three {
+  width: 54.78rem;
+  height: 12.563rem;
+  margin-bottom: 1.313rem;
+}
+
+.channel-four {
+  width: 33.84rem;
+  height: 19.4rem;
+}
+
+.channel-five {
+  width: 54.78rem;
+  height: 17.6rem;
+}
+
+@media screen and (max-width:106rem) {
+  .wrapper {
+    margin: 1rem;
+  }
+
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .title {
+    display: block;
+    margin: auto;
+  }
+
+  .right-container {
+    float: right;
+    width: 50%;
+    padding: 0.5rem;
+  }
+
+  .left-container {
+    float: left;
+    width: 50%;
+    padding: 0.5rem;
+  }
+
+  .channel {
+    height: auto;
+    margin-bottom: 1rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width:40rem) {
+  .wrapper {
+    margin: 1rem;
+  }
+
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .title {
+    display: block;
+    margin: auto;
+  }
+
+  .channel {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .right-container {
+    float: left;
+    width: 100%;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+}
