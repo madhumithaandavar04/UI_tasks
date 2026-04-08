@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-section {
+  padding: 1.93rem 42.6rem;
+  background-color: #2d5e90;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 1.353rem;
+  font-weight: 500;
+}
+
+.wrapper {
+  overflow: auto;
+  margin: 2.313rem 9rem 6.625rem;
+}
+
+.left-container,
+.right-container {
+  font-size: 1.08rem;
+  letter-spacing: 0.01rem;
+  float: left;
+}
+
+.left-container {
+  width: 54.875rem;
+  margin-right: 1.28rem;
+}
+
+.right-container {
+  width: 33.843rem;
+}
+
+.channel {
+  border: 0.08rem solid #2d5e90;
+  background-color: #f6f6f6;
+}
+
+.channel-name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0.85rem 1.6rem;
+  background-color: #2d5e90;
+  color: #ffffff;
+}
+
+.description {
+  padding: 1.45rem;
+  line-height: 1.62rem;
+  text-align: justify;
+}
+
+.channel-one,
+.channel-three {
+  margin-bottom: 1.3rem;
+}
+
+.channel-one .description,
+.channel-three .description,
+.channel-five .description {
+  word-spacing: 0.018rem;
+}
+
+.channel-two {
+  margin-bottom: 1.625rem;
+}
+
+.channel-two .description {
+  word-spacing: 0.05rem;
+  line-height: 1.49;
+}
+
+.channel-three .description {
+  line-height: 1.55rem;
+}
+
+.channel-four .description {
+  word-spacing: 0.04rem;
+  line-height: 1.6rem;
+}
+
+.channel-five .description {
+  line-height: 1.58rem;
+}
