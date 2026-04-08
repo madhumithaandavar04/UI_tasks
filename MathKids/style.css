@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.site-header {
+    display: block;
+    height: 4.5rem;
+    background-color: #b4df91;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.28rem 1.75rem 2.1rem 2rem;
+}
+
+.title,
+.sub-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    color: #000000;
+}
+
+.sub-title {
+    letter-spacing: 0.05rem;
+}
+
+.step {
+    display: flex;
+}
+
+.step-one {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5.313rem;
+    margin-top: 15.2rem;
+}
+
+.main-title,
+.dynamic-input {
+    font-size: 3.35rem;
+    font-weight: 400;
+    word-spacing: 0.1rem;
+}
+
+.shape-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.circle {
+    width: 9.625rem;
+    height: 9.625rem;
+    border-radius: 50%;
+    background-color: #43967e;
+    margin-bottom: 0.3rem;
+}
+
+.equilateral-triangle {
+    width: 0;
+    height: 0;
+    border-right: 5.1rem solid transparent;
+    border-left: 5.1rem solid transparent;
+    border-bottom: 10rem solid #f3afda;
+}
+
+.square {
+    width: 9.6rem;
+    height: 9.6rem;
+    background-color: #e0e0e0;
+}
+
+.selected {
+    display: block;
+}
+
+.shape-grid {
+    display: flex;
+    gap: 4.5rem;
+    align-items: flex-end;
+}
+
+.shape-card__tick {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(45deg);
+    height: 3.3rem;
+    width: 1.5rem;
+    border-bottom: 0.2rem solid #ffffff;
+    border-right: 0.2rem solid #ffffff;
+    border-radius: 0.1rem;
+}
+
+.circle-tick {
+    top: 2.6rem;
+    left: 4rem;
+}
+
+.triangle-tick {
+    top: 4.2rem;
+    left: 4.2rem;
+}
+
+.rectangle-tick {
+    top: 2.6rem;
+    left: 4rem;
+}
+
+.shape-card.active .shape-card__tick {
+    display: inline-block;
+}
+
+.btn {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #000000;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.next-btn {
+    display: none;
+    width: 13.563rem;
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+    margin-top: 0.40rem;
+}
+
+.step-two {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    gap: 2.75rem;
+    margin-top: 18.5rem;
+}
+
+.shape-input {
+    width: 44.625rem;
+    height: 5.375rem;
+    border: 0.1rem solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem;
+    outline: none;
+    font-size: 2rem;
+}
+
+.calculate-btn {
+    margin: .3rem;
+    width: 13.688rem;
+    margin-top: 0.6rem;
+}
+
+.step-three {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10.5rem;
+    width: 100%;
+}
+
+.result-display-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shape-title {
+    font-size: 3.35rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    line-height: 3.8rem;
+}
+
+.result-table {
+    font-size: 1.3rem;
+    border-collapse: separate;
+    border-spacing: 0rem 0.9rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    min-width: 470px;
+}
+
+.result-table td {
+    padding: 0.45rem 0.875rem;
+}
+
+.result-table td:nth-child(1) {
+    min-width: 12.688rem;
+    background-color: #2c60cf;
+
+}
+
+.result-table td:nth-child(2) {
+    min-width: 8.25rem;
+    background-color: #4a5c7b;
+}
+
+.result-table td:nth-child(3) {
+    min-width: 8.5rem;
+    background-color: #4a86f7;
+}
+
+.restart-btn {
+    width: 13.625rem;
+}

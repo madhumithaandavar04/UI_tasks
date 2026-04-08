@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Math Kids</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <h2 class="title">MATH KIDS</h2>
+        <h2 class="sub-title">KIDS LEARNING APP</h2>
+    </header>
+    <main class="app-container">
+        <!-------step 1 -------->
+        <section id="stepOne" class="step step-one">
+            <h1 class="main-title">1. Choose a Shape</h1>
+            <div class="shape-grid">
+                <!-----circle---->
+                <div class="shape-card">
+                    <div class="shape-card__tick circle-tick"></div>
+                    <div class="shape-card__shape circle"></div>
+                </div>
+                <!-------triangle--->
+                <div class="shape-card">
+                    <div class="shape-card__tick triangle-tick"></div>
+                    <div class="shape-card__shape equilateral-triangle"></div>
+                </div>
+                <!------square----->
+                <div class="shape-card">
+                    <div class="shape-card__tick rectangle-tick"></div>
+                    <div class="shape-card__shape square"></div>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button id="nextBtn" class="next-btn btn">NEXT</button>
+            </div>
+        </section>
+        <!-- ---step 2 ------>
+        <section id="stepTwo" class="step step-two">
+            <h1 class="dynamic-input">2. Enter Side (Base & Height)</h1>
+            <div class="input-group">
+                <input type="text" class="shape-input">
+            </div>
+            <div class="button-wrapper">
+                <button id="calculateButton" class="calculate-btn btn">CALCULATE</button>
+            </div>
+        </section>
+        <!-------step 3 -------->
+        <section id="stepThree" class="step step-three">
+            <div class="result-display-header">
+                <div id="resultShapeIcon" class="shape-icon"></div>
+                <h2 id="resultShapeName" class="shape-title"></h2>
+            </div>
+            <table class="result-table">
+                <tr>
+                    <td id="resultUnitName">SIDE</td>
+                    <td id="resultUnit"></td>
+                    <td id="resultInputDisplay"></td>
+                </tr>
+                <tr>
+                    <td>AREA</td>
+                    <td id="resultAreaFormula"></td>
+                    <td id="resultAreaDisplay"></td>
+                </tr>
+                <tr>
+                    <td>PERIMETER</td>
+                    <td id="resultPerimeterFormula"> </td>
+                    <td id="resultPerimeterDisplay"></td>
+                </tr>
+            </table>
+            <div class="button-wrapper">
+                <button id="startAgainBtn" class="btn restart-btn">START AGAIN</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
