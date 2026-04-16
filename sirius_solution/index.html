@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <title>Sirius Solution</title>
+<!----google font---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<!-----jquery-------->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!------jquery ui------>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!------js----->
+    <script src="script.js"></script>
+   
+<!-----css------>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!------header------>
+    <header class="header">
+        <figure class="header__logo">
+       <img src="./assets/logo.png" class="logo">
+        </figure>
+    </header>
+    <main>
+        <div id="tabsContainer" class="tabs-container">
+            <ul>
+                <li><a href="#tabAbout">ABOUT US</a></li>
+                <li><a href="#tabSolutions">SOLUTIONS</a></li>
+                <li><a href="#tabLocations">LOCATIONS</a></li>
+            </ul>
+
+            <!-- about tab container -->
+            <div id="tabAbout" class="tabs-container__panel">
+                <div class="about-section">
+                    <p class="about-section__text">
+                        Sirius is a national integrator of technology-based business solutions that span the enterprise, including the data center and lines of business. Built on products and services from the world's top technology companies, Sirius solutions are installed, configured and supported by our dedicated teams of highly certified experts. With the right people and the right partners, Sirius focuses on solutions that will help you manage your operations, optimize your IT, secure it all, and transform your business. We require our teams to be certified in multiple disciplines and products, so they can help you get from the high-level architecture of a solution all the way down to the technical configuration and implementation of point-products. Since its founding in 1980, Sirius has grown to be one of the largest IT solutions integrators in the U.S. Today, Sirius offers integrated, multivendor technology solutions that meet the requirements of the full range of organizations, from small businesses with fewer than 500 employees to large enterprises with thousands of employees and hundreds of locations.
+                    </p>
+                    <div class="about-section__image-container">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Corporate Team Meeting" class="about-section__image"></div>
+                </div>
+            </div>
+
+
+            <!-- solutions tab container -->
+            <div id="tabSolutions" class="tabs-container__panel">
+                <div class="solutions-section">
+                    <div id="solutionsAccordion" class="accordion-container">
+                        <h3 class="accordion-container__header">DIGITAL EXPERIENCE</h3>
+                        <div class="accordion-container__content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+
+
+                        <h3 class="accordion-container__header">QUALITY ASSURANCE</h3>
+                        <div class="accordion-container__content">
+                            <p>Our quality assurance processes ensure that digital solutions function correctly, perform optimally, and are secure. We help to minimize risk and avoid application downtime.</p>
+                        </div>
+
+
+                        <h3 class="accordion-container__header">MANAGED SERVICES</h3>
+                        <div class="accordion-container__content">
+                            <p>Our Managed Services group acts as an extension of your IT staff, providing expertise and offloading the operational burden of managing complex hybrid infrastructures.</p>
+                        </div>
+
+
+                        <h3 class="accordion-container__header">INFORMATION TECHNOLOGY</h3>
+                        <div class="accordion-container__content">
+                            <p>Our IT solutions encompass data center innovation, cloud strategies, and enterprise security, empowering organizations to stay ahead of the digital curve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- locations container -->
+            <div id="tabLocations" class="tabs-container__panel">
+                <div class="locations-section">
+                    <table id="locationsTable" class="locations-table">
+                        <tbody id="locationsTableBody" class="locations-table__body">
+                            <!---location table rows-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+</html>
+
+
+
