@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <title>Pocket Notes</title>
+</head>
+
+<body>
+  <!-----------home------------>
+  <div id="pageHome" class="page active">
+    <!-- header -->
+    <header class="site-header" id="site-header">
+      <div class="header-content">
+        <span class="logo">Pocket Notes</span>
+        <div class="header-actions" id="header-actions">
+          <button class="btn btn--danger" id="btnDeleteAll">DELETE ALL</button>
+          <button class="btn btn--primary" id="btnNew">NEW</button>
+        </div>
+      </div>
+    </header>
+    <!-- main content -->
+    <main class="main-content" id="main-content">
+      <!-- empty state -->
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state__icon-wrapper">
+          <img src="./assets/cube.svg" class="empty-state__icon">
+        </div>
+        <p class="empty-state__text">Notes you add appear here</p>
+      </div>
+      <!-- notes list -->
+      <div class="notes-grid" id="notesGrid"></div>
+      <div class="load-more-wrap" id="loadMoreWrap">
+        <button class="btn btn--primary btn--more" id="btnLoadMore">LOAD MORE</button>
+      </div>
+    </main>
+  </div>
+  <!----------page details-------->
+  <div id="pageDetail" class="page">
+    <header class="site-header site-header--detail" id="detail-header">
+      <div class="header-content">
+        <button class="btn btn--back" id="btnBack">
+          <i class="fa-solid fa-arrow-left-long back-arrow"></i> Pocket Notes
+        </button>
+        <div class="header-actions">
+          <button class="btn btn--danger" id="btnDetailDelete">DELETE</button>
+          <button class="btn btn--primary" id="btnDetailEdit">EDIT</button>
+        </div>
+      </div>
+    </header>
+    <main class="detail-content" id="detail-content">
+      <section class="detail-meta">
+        <div class="detail-color-dot" id="detail-color-dot"></div>
+        <div class="detail-heading">
+          <h2 class="detail-title" id="detail-title"></h2>
+          <p class="detail-date" id="detail-date"></p>
+        </div>
+      </section>
+      <div class="detail-image-wrap" id="detailImageWrap">
+        <img class="detail-image" id="detailImage" src="" alt="Note image" />
+      </div>
+      <p class="detail-body" id="detail-body"></p>
+    </main>
+  </div>
+  <!-----------modal overlay--------->
+  <div class="modal-overlay" id="modalOverlay">
+  </div>
+  <!-------------new/edit modal---------->
+  <section class="modal-panel" id="modalNote">
+    <section class="modal-panel__header">
+      <span class="modal-panel__title" id="modalNoteTitle">NEW NOTE</span>
+      <button class="modal-panel__close" id="modalNoteClose" aria-label="Close">&times;</button>
+    </section>
+    <section class="modal-panel__body">
+      <div class="form-group">
+        <input type="text" id="noteTitle" class="form-input title" placeholder="Notes Title" />
+        <span class="form-error" id="errorTitle"></span>
+      </div>
+      <div class="form-group">
+        <input type="url" id="noteImage" class="form-input image" placeholder="Add Image URL" />
+      </div>
+      <div class="form-group">
+        <textarea id="noteContent" class="form-textarea" placeholder="Add Content Here"></textarea>
+        <span class="form-error" id="errorContent"></span>
+      </div>
+    </section>
+    <section class="modal-panel__footer">
+      <section class="color-picker" id="colorPicker">
+        <button class="color-list" data-color="#E1C2E6"></button>
+        <button class="color-list" data-color="#FFFFFF"></button>
+        <button class="color-list" data-color="#FFCC80"></button>
+        <button class="color-list" data-color="#E6EE9C"></button>
+        <button class="color-list" data-color="#FFAB91"></button>
+      </section>
+      <section class="modal-panel__footer-actions">
+        <button class="btn btn--primary" id="modalNoteSave" disabled>ADD</button>
+      </section>
+    </section>
+  </section>
+  <!-- confirm delete-->
+  <div class="modal-confirm" id="modalConfirmDelete">
+    <div class="modal-confirm__inner">
+      <div class="modal-confirm__header">
+        <span class="modal-confirm__title" id="confirm-delete-title">DELETE NOTE</span>
+        <button class="modal-confirm__close" id="confirm-delete-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-confirm__body">
+        <p id="confirm-delete-message">Are you sure you want to delete this note?</p>
+      </div>
+      <div class="modal-confirm__footer">
+        <button class="btn btn--primary" id="confirmDeleteYes">YES, DELETE</button>
+      </div>
+    </div>
+  </div>
+  <!-- confirm leave-->
+  <div class="modal-confirm" id="modalConfirmLeave">
+    <div class="modal-confirm__inner">
+      <div class="modal-confirm__header">
+        <span class="modal-confirm__title">CONFIRM</span>
+        <button class="modal-confirm__close" id="confirmLeaveClose">&times;</button>
+      </div>
+      <div class="modal-confirm__body leave">
+        <p>Seems like you are in the middle of adding/editing content. Do you want to leave?</p>
+      </div>
+      <div class="modal-confirm__footer">
+        <button class="btn btn--primary" id="confirmLeaveYes">YES, CLOSE</button>
+      </div>
+    </div>
+  </div>
+  <!--notification-->
+  <div class="toast" id="toast"></div>
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

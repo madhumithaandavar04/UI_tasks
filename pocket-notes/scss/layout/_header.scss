@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+
+//header
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: $header-bg;
+  box-shadow: 0 0.125rem 0.875rem #000000b3;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.8rem 2.25rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  &--detail {
+    .header-content {
+      padding: 1.4rem 1rem;
+    }
+  }
+}
+
+.header-content .logo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $white;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

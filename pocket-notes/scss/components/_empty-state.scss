@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+//empty state
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 33.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+
+  &__icon-wrapper {
+    width: 10rem;
+    height: 11.2rem;
+    margin-bottom: 1.8rem;
+  }
+  &_icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__text {
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: #a5a4a4;
+  }
+}
