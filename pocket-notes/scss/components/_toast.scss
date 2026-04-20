@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+// toast
+.toast {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #222222;
+  color: $white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  z-index: 1000;
+  opacity: 0;
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+  border: 1px solid #a351d466;
+
+  &.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}

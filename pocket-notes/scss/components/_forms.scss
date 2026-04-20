@@ -1,0 +1,113 @@
+@use "../abstracts/variables" as *;
+// form elements
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.form-input,
+.form-textarea {
+  background: transparent;
+  border: none;
+  color: $white;
+  font-family: "Lato", sans-serif;
+  padding: 0.2rem 1.05rem 0.2rem 0;
+  outline: none;
+  width: 100%;
+  &::placeholder {
+    color: #ffffff4d;
+    font-size: 0.9rem;
+  }
+}
+
+.form-input.title {
+  font-size: 1.8rem;
+  &::placeholder {
+    font-size: 1.75rem;
+  }
+}
+
+.form-input.image {
+  font-size: 1rem;
+  &::placeholder {
+    font-size: 1.08rem;
+  }
+}
+
+.form-textarea {
+  resize: none;
+  flex: 1;
+  field-sizing: content;
+  max-height: 38rem;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  &::placeholder {
+    font-size: 1.06rem;
+  }
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: #ff6b6b;
+  min-height: 1rem;
+  padding-left: 2px;
+  display: none;
+}
+
+//color
+.color-picker {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.color-list {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 0.125rem solid transparent;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s;
+  position: relative;
+  outline: none;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  &.selected {
+    border-color: $purple;
+    box-shadow: 0 0 0 0.125rem rgba(163, 81, 212, 0.4);
+
+    &::after {
+      content: "✓";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: $text-dark;
+    }
+  }
+}
+
+.color-list:nth-child(1) {
+  background-color: #e6cdeb;
+}
+.color-list:nth-child(2) {
+  background-color: #fcfcfc;
+}
+.color-list:nth-child(3) {
+  background-color: #f7cc7f;
+}
+.color-list:nth-child(4) {
+  background-color: #e7ee9b;
+}
+.color-list:nth-child(5) {
+  background-color: #f2ab90;
+}
