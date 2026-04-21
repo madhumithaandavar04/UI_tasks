@@ -3,7 +3,6 @@
  */
 function createCustomElement(tag, className, attributes = {}) {
     const $element = $(`<${tag}>`);
-
     if (className) {
         if (Array.isArray(className)) {
             $element.addClass(className.join(' '));
@@ -18,7 +17,6 @@ function createCustomElement(tag, className, attributes = {}) {
     }
     // Set attributes
     $element.attr(attributes);
-
     return $element;
 }
 
@@ -33,7 +31,6 @@ async function loadMovie() {
         const $video = createCustomElement('video', 'movie', {
             src: movie.videoUrl,
             poster: "https://www.slashcam.de/images/news/sprite_fright1-16857_PIC1.jpg"
-
         });
         $video.on('error', function () {
             $(this).removeAttr('poster');
@@ -41,7 +38,6 @@ async function loadMovie() {
         const $playIcon = createCustomElement('i', ['fa-solid', 'fa-play', 'play-icon']);
         const $playBtn = createCustomElement('div', 'play-container').append($playIcon);
         const $videoContainer = createCustomElement('div', 'video-container').append($video, $playBtn);
-
         const $videoTitle = createCustomElement('h3', 'movie__title', { textContent: movie.title });
         const $videoDescription = createCustomElement('p', 'movie__description', { textContent: movie.description });
         // Video Event Listeners 
@@ -50,34 +46,26 @@ async function loadMovie() {
             $video[0].play();
             $(this).hide();
         });
-
         $video.on('pause', () => {
             $video[0].controls = true;
             $playBtn.css('display', 'flex');
         });
-
         $video.on('play', () => {
             $playBtn.hide();
         });
-
         // Comment Section
         const $commentSection = createCustomElement('section', 'movie__comments');
         $commentSection.append(createCustomElement('h3', 'comment-heading', { textContent: "Comments" }));
-
         movie.comments.forEach(comment => {
             const $commentImg = createCustomElement('img', 'comment__img', { src: comment.image });
             const $commentFigure = createCustomElement('figure', 'comment__img-wrapper').append($commentImg);
-
             const $author = createCustomElement('h3', 'comment-details__author', { textContent: comment.name });
             const $content = createCustomElement('p', 'comment-details__content', { textContent: comment.comment });
             const $details = createCustomElement('div', 'comment-details').append($author, $content);
-
             const $container = createCustomElement('article', 'comment-container').append($commentFigure, $details);
             $commentSection.append($container);
         });
-
         $primaryContent.append($videoContainer, $videoTitle, $videoDescription, $commentSection);
-
     } catch (error) {
         console.error("Failed to load movie data:", error);
     }
@@ -88,15 +76,14 @@ async function loadMovie() {
  */
 async function loadUpcomingMovies() {
     const $secondaryContent = $('#secondaryContentProjects');
-
     try {
         const response = await $.getJSON("https://mocki.io/v1/2fcc44b7-e0e8-4949-bb4c-fe5b1b265818");
-        const posters=response.data;
-        posters.forEach(poster =>{
+        const posters = response.data;
+        posters.forEach(poster => {
             const $img = createCustomElement('img', 'poster-img', {
                 src: poster.imageUrl,
                 alt: poster.title
-            }).on('error',function(){$(this).attr('src','https://www.dummyimg.in/placeholder?width=266&height=373&text=No%20image')});
+            }).on('error', function () { $(this).attr('src', 'https://www.dummyimg.in/placeholder?width=266&height=373&text=No%20image') });
             const $figure = createCustomElement('figure', 'poster-wrapper').append($img);
             $secondaryContent.append($figure);
         });
